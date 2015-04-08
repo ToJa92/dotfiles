@@ -1,0 +1,86 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+" Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'scrooloose/syntastic.git'
+Plugin 'kien/ctrlp.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'chriskempson/base16-vim'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Glench/Vim-Jinja2-Syntax'
+Plugin 'Raimondi/delimitMate'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+set t_Co=256 " Use 256 colors
+set laststatus=2 " Always show the status line
+set number " Show line numbers
+set incsearch " Highlight dynamically as pattern is typed
+set ignorecase " Ignore case of searches
+set smartcase " Uppercase searches are searched for exactly
+set timeoutlen=1000 ttimeoutlen=50 " The time in milliseconds that is waited for a key code or mapped key sequence to complete
+syntax on " Syntax hightlighting
+set wildmenu " Enhance command-line completion
+set mouse=a " Enable mouse in all modes
+set ttymouse=sgr " Handle large terminals
+set expandtab " Use spaces instead of tabs
+set shiftwidth=4 " Identation width
+set softtabstop=4 " the tab character's width
+set clipboard=unnamed " Share clipboard with system
+set encoding=utf-8 nobomb " Use UTF-8 without BOM
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_python_python_exec = '/usr/local/bin/python3'
+let g:syntastic_python_checkers = ['pylint']
+
+" Ctrl-P
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" Base16
+set background=dark
+silent! colorscheme base16-default
+
+" Airline
+let g:airline_powerline_fonts = 1
+
+" vim-markdown
+let g:vim_markdown_frontmatter=1
+
