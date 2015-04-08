@@ -3,6 +3,7 @@
     ~/.vim: vim/
     ~/.zshrc: zshrc
     ~/.zshenv: zshenv
-    ~/.oh-my-zsh: oh-my-zsh
+    ~/.oh-my-zsh: oh-my-zsh/
+    ~/.emacs.d: emacs.d/
 - shell: 
     - vim +PluginInstall +qall
