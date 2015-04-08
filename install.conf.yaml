@@ -1,5 +1,8 @@
 - clean: ['~', '~/.config']
 - link:
     ~/.vim: vim/
+    ~/.zshrc: zshrc
+    ~/.zshenv: zshenv
+    ~/.oh-my-zsh: oh-my-zsh
 - shell: 
     - vim +PluginInstall +qall
