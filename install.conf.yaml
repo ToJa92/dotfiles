@@ -7,5 +7,6 @@
     ~/.emacs.d: emacs.d/
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
+    ~/.weechat: weechat/
 - shell: 
     - vim +PluginInstall +qall
