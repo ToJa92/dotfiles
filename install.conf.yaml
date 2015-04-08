@@ -5,5 +5,7 @@
     ~/.zshenv: zshenv
     ~/.oh-my-zsh: oh-my-zsh/
     ~/.emacs.d: emacs.d/
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
 - shell: 
     - vim +PluginInstall +qall
