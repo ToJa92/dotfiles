@@ -56,6 +56,8 @@ set shiftwidth=4 " Identation width
 set softtabstop=4 " the tab character's width
 set clipboard=unnamed " Share clipboard with system
 set encoding=utf-8 nobomb " Use UTF-8 without BOM
+set splitbelow " Create new splits below
+set splitright " Create new splits to the right
 
 " Syntastic
 set statusline+=%#warningmsg#
