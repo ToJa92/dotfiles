@@ -62,6 +62,13 @@ set encoding=utf-8 nobomb " Use UTF-8 without BOM
 set splitbelow " Create new splits below
 set splitright " Create new splits to the right
 
+" Keyboard mappings
+" Map alt + hjkl to switch between panes
+:nnoremap h <C-w>h
+:nnoremap l <C-w>l
+:nnoremap j <C-w>j
+:nnoremap k <C-w>k
+
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
