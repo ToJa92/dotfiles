@@ -28,6 +28,10 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'pangloss/vim-javascript'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-ragtag'
+Plugin 'davidhalter/jedi-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -45,7 +49,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 set t_Co=256 " Use 256 colors
 set laststatus=2 " Always show the status line
-set number " Show line numbers
+set relativenumber " Show relative line numbers 
 set incsearch " Highlight dynamically as pattern is typed
 set ignorecase " Ignore case of searches
 set smartcase " Uppercase searches are searched for exactly
@@ -80,20 +84,33 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_python_exec = '/usr/local/bin/python3'
-let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_checkers = ['pep8']
 
 let g:syntastic_javascript_checkers = ['jshint']
+
 " Ctrl-P
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " Base16
 set background=dark
-silent! colorscheme base16-default
+silent! colorscheme base16-twilight
 
 " Airline
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " vim-markdown
 let g:vim_markdown_frontmatter=1
+let g:vim_markdown_folding_disabled=1
 
+" vim-session
+let g:session_autoload = 'no'
+let g:session_autosave = 'no' 
+let g:session_autosave_periodic = 2
+
+" Nerdtree
+map <C-n> :NERDTreeToggle<CR>
+
+" Jedi
+let g:jedi#use_tabs_not_buffers = 1
