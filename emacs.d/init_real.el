@@ -4,14 +4,14 @@
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
-(package-refresh-contents)
+;; (package-refresh-contents)
 
-(defvar my-package-list
-  '(flx-ido flx js2-mode magit markdown-mode projectile smart-mode-line zenburn-theme))
+;;(defvar my-package-list
+;;  '(flx-ido flx js2-mode magit markdown-mode projectile smart-mode-line zenburn-theme))
 
-(dolist (package my-package-list)
-  (when (not (package-installed-p package))
-    (package-install package)))
+;; (dolist (package my-package-list)
+;;  (when (not (package-installed-p package))
+;;    (package-install package)))
 
 ; whitespace mode configuration
 (require 'whitespace)
