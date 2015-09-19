@@ -7,7 +7,6 @@
     ~/.emacs.d: emacs.d/
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
-    ~/.weechat: weechat/
 - shell: 
     - git submodule update --init --recursive
     - vim +PluginInstall +qall
