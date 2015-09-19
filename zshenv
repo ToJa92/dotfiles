@@ -3,6 +3,7 @@ export LANG="en_US.UTF-8"
 export DEFAULT_USER="toja92"
 export EDITOR="vim"
 export KEYTIMEOUT=1
+export XDG_CONFIG_HOME="~/.config"
 
 typeset -U path
 
