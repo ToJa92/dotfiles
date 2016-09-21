@@ -9,4 +9,5 @@
     ~/.gitignore_global: gitignore_global
     ~/.weechat: weechat/
 - shell: 
+    - git submodule update --init --recursive
     - vim +PluginInstall +qall

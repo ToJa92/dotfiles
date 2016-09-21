@@ -45,7 +45,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump pip brew vagrant)
+plugins=(git autojump pip brew python ruby)
 
 # User configuration
 
@@ -85,3 +85,12 @@ alias installvimplugins="vim +PluginInstall +qall"
 
 export NVM_DIR="/Users/toja92/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+unsetopt share_history
+
+alias installvimplugins="vim +PluginInstall +qall"
+
+ssh_pageant="/usr/local/bin/ssh-pageant"
+if [[ `uname` == *"CYGWIN"* ]] && [[ -x "$ssh_pageant" ]]; then
+    eval $("$ssh_pageant" -ra $TEMP/.ssh-pageant)
+fi
