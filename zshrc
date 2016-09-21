@@ -82,3 +82,6 @@ unsetopt share_history
 
 alias installvimplugins="vim +PluginInstall +qall"
 
+
+export NVM_DIR="/Users/toja92/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
