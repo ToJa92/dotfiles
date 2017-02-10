@@ -7,7 +7,10 @@
     ~/.emacs.d: emacs.d/
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
-    ~/.weechat: weechat/
+    ~/.config/awesome: config/awesome/
+    ~/.Xresources: Xresources
+    ~/.tmux.conf: tmux.conf
 - shell: 
     - git submodule update --init --recursive
     - vim +PluginInstall +qall
+    - xrdb ~/.Xresources
