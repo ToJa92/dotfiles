@@ -20,7 +20,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/syntastic.git'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'chriskempson/base16-vim'
+" Plugin 'chriskempson/base16-vim'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Glench/Vim-Jinja2-Syntax'
@@ -93,8 +94,8 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " Base16
-set background=dark
-silent! colorscheme base16-twilight
+set background=light
+silent! colorscheme solarized
 
 " Airline
 let g:airline_powerline_fonts = 1
