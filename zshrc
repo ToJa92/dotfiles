@@ -82,7 +82,6 @@ unsetopt share_history
 
 alias installvimplugins="vim +PluginInstall +qall"
 
-
 export NVM_DIR="/Users/toja92/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
@@ -93,4 +92,9 @@ alias installvimplugins="vim +PluginInstall +qall"
 ssh_pageant="/usr/local/bin/ssh-pageant"
 if [[ `uname` == *"CYGWIN"* ]] && [[ -x "$ssh_pageant" ]]; then
     eval $("$ssh_pageant" -ra $TEMP/.ssh-pageant)
+fi
+
+tmux_path="/usr/bin/tmux"
+if [[ "$TMUX" = "" ]] && [[ -x "$tmux_path" ]]; then
+    tmux
 fi

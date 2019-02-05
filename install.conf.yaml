@@ -7,7 +7,11 @@
     ~/.emacs.d: emacs.d/
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
+    ~/.config/awesome: config/awesome/
+    ~/.Xresources: Xresources
+    ~/.tmux.conf: tmux.conf
 - shell: 
     - git submodule foreach git checkout master
     - git submodule foreach git pull origin master
     - vim +PluginInstall +qall
+    - xrdb ~/.Xresources
