@@ -1,3 +1,4 @@
+setopt no_global_rcs
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -92,6 +93,13 @@ alias installvimplugins="vim +PluginInstall +qall"
 ssh_pageant="/usr/local/bin/ssh-pageant"
 if [[ `uname` == *"CYGWIN"* ]] && [[ -x "$ssh_pageant" ]]; then
     eval $("$ssh_pageant" -ra $TEMP/.ssh-pageant)
+fi
+
+export NVM_DIR="/Users/toja92/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+if (( $+commands[rbenv] )) ; then
+  eval "$(rbenv init -)" 
 fi
 
 tmux_path="/usr/bin/tmux"
