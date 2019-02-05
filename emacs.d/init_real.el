@@ -1,18 +1,19 @@
 ;; Initialize the package system
 (setq package--init-file-ensured t)
 (require 'package)
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "https://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
+;;                          ("melpa" . "http://melpa.milkbox.net/packages/")))
+(add-to-list 'package-archives (cons "melpa" "https://melpa.org/packages/") t)
 (package-initialize)
 ;; (package-refresh-contents)
 
 ;; (defvar my-package-list
-;;  '(flx-ido flx js2-mode magit markdown-mode projectile smart-mode-line color-theme-solarized))
+;;   '(flx-ido flx js2-mode magit markdown-mode projectile smart-mode-line solarized-theme))
 
-;; (dolist (package my-package-list)
-;;  (when (not (package-installed-p package))
-;;    (package-install package)))
+ ;; (dolist (package my-package-list)
+ ;;  (when (not (package-installed-p package))
+ ;;    (package-install package)))
 
 ; whitespace mode configuration
 (require 'whitespace)
@@ -25,8 +26,7 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; Load the zenburn theme
-(setq frame-background-mode 'light)
-(load-theme 'solarized t)
+(load-theme 'solarized-light t)
 
 ;; Flx and ido
 (require 'flx-ido)

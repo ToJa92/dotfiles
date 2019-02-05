@@ -132,14 +132,15 @@ the syntax class ')'."
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" default)))
+    ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "c5a044ba03d43a725bd79700087dea813abcb6beb6be08c7eb3303ed90782482" "3a727bdc09a7a141e58925258b6e873c65ccf393b2240c51553098ca93957723" "1fa76c8d9baaeb5dc498d2a4baaf71be6d3a8b6412af994d691fbe7a7b167321" default)))
  '(desktop-save t)
+ '(magit-diff-use-overlays nil)
  '(magit-git-executable "/usr/bin/git")
  '(magit-repository-directories '(("~/git" . 2)))
  '(ns-use-native-fullscreen t)
  '(package-selected-packages
    (quote
-    (color-theme-solarized smart-mode-line projectile markdown-mode magit js2-mode flx-ido))))
+    (solarized-theme smart-mode-line projectile markdown-mode magit js2-mode flx-ido))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
